@@ -5,22 +5,27 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class TestLiskov {
+    private Forma forma;
+
     @Test
     public void TestRectangulo(){
         Rectangulo rectangulo = new Rectangulo();
         rectangulo.setAltura(3);
         rectangulo.setAncho(7);
 
-        assertEquals(21, rectangulo.area());
+        forma = rectangulo;
+
+        assertEquals(21, forma.area());
     }
 
     @Test
     public void TestCuadrado(){
-        Rectangulo rectangulo = new Cuadrado();
-        rectangulo.setAltura(3);
-        rectangulo.setAncho(7);
+        Cuadrado cuadrado = new Cuadrado();
+        cuadrado.setLado(3);
 
-        assertEquals(21, rectangulo.area());
+        forma  = cuadrado;
+
+        assertEquals(9, forma.area());
     }
 }
 

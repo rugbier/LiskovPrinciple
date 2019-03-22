@@ -1,17 +1,18 @@
 package com.example.solid.liskovprinciple;
 
-public class Cuadrado extends Rectangulo{
-    @Override
-    public void setAltura(int altura){
-        this.altura = altura;
-        this.ancho = altura;
+public class Cuadrado implements Forma{
+    private int lado;
+
+    public int getLado() {
+        return lado;
     }
 
-    @Override
-    public void setAncho(int ancho){
-        this.ancho = ancho;
-        this.altura = ancho;
+    public void setLado(int lado) {
+        this.lado = lado;
     }
 
+    public int area(){
+        return lado * lado;
+    }
 
 }

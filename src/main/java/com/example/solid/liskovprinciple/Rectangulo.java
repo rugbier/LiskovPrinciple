@@ -1,6 +1,6 @@
 package com.example.solid.liskovprinciple;
 
-public class Rectangulo {
+public class Rectangulo implements Forma{
     protected int altura;
     protected int ancho;
 
